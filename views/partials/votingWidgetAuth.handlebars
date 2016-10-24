@@ -1,0 +1,49 @@
+<div class='container' style='margin-top:60px'>
+    <div class='row '>
+        <div class='col-xs-12'>
+            <!--Div that will hold the pie chart-->
+            <div id="chart_div" class='chart'></div>
+        </div>
+    </div>
+    <div class='row '>
+        <div class='col-xs-12 col-sm-8 col-sm-offset-2 '>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{title}}</h3>
+                </div>
+                <div class="panel-body">
+                    <form method='POST' onsubmit="this.action = '{{_id}}' ;">
+                        {{#each options}}
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" value='{{option}}'> {{option}}
+                            </label>
+                        </div>
+                        {{/each}}
+                        <div class="form-group">
+                        <input type="text" class="form-control" placeholder="If the existing poll options don't satisfy you, type a new one." name="newPollOption">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        $(window).resize(function () {
+            drawChart();
+        });
+        $(window).ready(function(){
+        $("body").css('background-color','white');
+        });
+ /*       var newLabel = "<label>JIRA</label>"
+         $(window).ready(function(){
+        $(".radio").eq(-1).after("<div class='radio' id='newDiv'></div");
+        $("#newDiv").append("<label id='newLabel'></label>" );
+        $("#newLabel").append("<input type='radio' name='optionsRadios' value='newValue'>hello ")     
+        });   */                    
+        
+    </script>
+{{!-- http://stackoverflow.com/questions/3905377/jquery-selector-before-last--}}

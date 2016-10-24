@@ -1,0 +1,29 @@
+{{#section 'Menu'}}
+
+    {{> bigMenu}}
+
+{{/section}}
+
+{{#each polls}}
+<!--
+<div style="position:relative; background-color:orange; ">
+      <a href='{{url}}' class="list-group-item" style="position:absolute; width:100%">
+       <h5 style="text-align:center; font-weight:normal; padding:8px;">{{pollTitle}} 
+      </h5>
+     </a>
+<button class="btn btn-danger" style="padding:8px; position:absolute; right:0px; top:2vh "> Delete Poll</button>
+    </div>
+-->
+
+<div class="row emphasis">
+    <div class= "col-xs-12 col-sm-10">
+        <a href='{{url}}'>
+            <h5 style="text-align:center; font-weight:normal; padding:8px;">{{pollTitle}}</h5>
+        </a> 
+    </div>    
+    <div class="col-xs-12  col-sm-2" style="padding:8px">
+        <a href='{{delUrl}}' class="btn btn-danger btn-block" style="border-radius:20px"> Delete Poll </a>
+    </div>
+</div> 
+
+ {{/each}}

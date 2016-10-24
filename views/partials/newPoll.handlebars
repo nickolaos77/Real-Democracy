@@ -1,0 +1,21 @@
+
+<form class="form-horizontal" action='/newPoll' method='POST'>
+      <div class="form-group">
+        <label for="pollTitle" class="col-sm-2 control-label">Title</label>
+        <div class="col-sm-8">
+            <input type="text" name='pollTitle' class="form-control" id="pollTitle" placeholder="Poll Title">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="options" class="col-sm-2 control-label">Options (Comma seperated)</label>
+        <div class="col-sm-8">
+            <textarea class="form-control" rows="3" name='options' id="options" placeholder="Textarea"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Make New Poll</button>
+        </div>
+    </div>
+</form>
+  
